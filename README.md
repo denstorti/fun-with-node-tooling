@@ -1,4 +1,4 @@
-# Fun with Nodejs and Javacript environment
+# Fun with Nodejs and Javacript environment [![Build Status](https://travis-ci.org/denstorti/fun-with-node-tooling.svg?branch=master)](https://travis-ci.org/denstorti/fun-with-node-tooling)
 Experiments using Nodejs and some tooling like Lint, testing, CI and automation
 
 How to run:
