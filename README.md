@@ -6,6 +6,8 @@ How to run:
 2. npm start
 3. open http://localhost:8080?grades=20,55,12
 
+Check the build: https://travis-ci.org/denstorti/fun-with-node-tooling
+
 Scripts on package.json:
 
 ```json
