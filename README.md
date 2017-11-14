@@ -4,7 +4,7 @@ Experiments using Nodejs and some tooling like Lint, testing, CI and automation
 How to run:
 1. npm install
 2. npm start
-3. open http://localhost:8080?grades=20,55,12
+3. open http://localhost:8080?grades=20,55,12 or http://localhost:8080/users
 
 Check the build: https://travis-ci.org/denstorti/fun-with-node-tooling
 
