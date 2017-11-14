@@ -10,10 +10,10 @@
   "scripts": {
     "prestart": "node ./scripts/preMessage.js",
     "start": "npm-run-all --parallel inicial test:watch security-check lint",
-    "inicial": "node ./index.js ",
+    "inicial": "node ./src/index.js ",
     "lint": "esw --watch --color",
     "security-check": "nsp check",
-    "test": "mocha --reporter progress \"lib/**/*.test.js\"",
+    "test": "mocha --reporter progress \"lib/**/*.test.js\" \"src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch"
   },
   "devDependencies": {

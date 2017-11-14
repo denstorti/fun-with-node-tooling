@@ -1,7 +1,7 @@
 var express = require("express");
 var app = express();
 var port = process.argv[2] ? process.argv[2] : 8080;
-var book = require("./lib/gradeBook").book;
+var book = require("../lib/gradeBook").book;
 
 app.get("/", function (req, res) {
 	if (req.query.grades) {
@@ -17,6 +17,8 @@ app.get("/", function (req, res) {
 	res.write("\nYOUR AVERAGE IS: " + book.getAverage());
 	res.end();
 });
+
+
 
 app.listen(port);
 console.log("Listening to port " + port);
