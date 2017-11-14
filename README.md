@@ -1,9 +1,25 @@
-# fun-with-node-tooling
+# Fun with Nodejs and Javacript environment
 Experiments using Nodejs and some tooling like Lint, testing, CI and automation
 
-> npm install
-> npm start
-> http://localhost:8080?grades=20,55,12
+How to run:
+1. npm install
+2. npm start
+3. open http://localhost:8080?grades=20,55,12
+
+Scripts on package.json:
+
+```json
+  "scripts": {
+    "prestart": "node ./scripts/preMessage.js",
+    "start": "npm-run-all --parallel inicial test:watch security-check lint",
+    "inicial": "node ./src/index.js ",
+    "lint": "esw --watch --color",
+    "security-check": "nsp check",
+    "test": "mocha --reporter progress \"lib/**/*.test.js\" \"src/**/*.test.js\"",
+    "test:watch": "npm run test -- --watch"
+  }
+```
+Some notes about tooling for Javascript environment:
 
 	• Bundling
 		○ ES6 Modules and CommonJS
