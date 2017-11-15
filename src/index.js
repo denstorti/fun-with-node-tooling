@@ -18,7 +18,15 @@ app.get("/", function (req, res) {
 	res.end();
 });
 
-
+app.get("/users", function (req, res) {
+	res.json(
+		[
+			{"id":1, "firstName": "Bob", "surname": "Wolf"},
+			{"id":2, "firstName": "Alice", "surname": "Snake"},
+			{"id":3, "firstName": "Porto", "surname": "Ferreira"},
+		]
+	);
+});
 
 app.listen(port);
 console.log("Listening to port " + port);
