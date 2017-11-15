@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 var port = process.argv[2] ? process.argv[2] : 8080;
 var book = require("../lib/gradeBook").book;
-
+debugger;
 app.get("/", function (req, res) {
 	if (req.query.grades) {
 		var grades = req.query.grades.split(",");

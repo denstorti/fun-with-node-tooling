@@ -23,6 +23,28 @@ Scripts on package.json:
 ```
 Some notes about tooling for Javascript environment:
 
+	• Nodejs can be for frontend developers too
+
+	• ES6 Features
+		○ http://es6-features.org
+
+	• Promises vs Callbacks
+		○ new Promise(function(resolve, reject){})
+		○ promise.then(success (result){}, error(result){})
+		○ https://developers.google.com/web/fundamentals/primers/promises?hl=pt-br#whats-all-the-fuss-about
+		○ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises
+
+	• Auth
+		○ Passport (auth)
+
+	• View/Template
+		○ Angular
+		○ EJS
+		○ Jade
+
+	• APM
+		○ https://blog.risingstack.com/monitoring-nodejs-applications-nodejs-at-scale/
+
 	• Bundling
 		○ ES6 Modules and CommonJS
 		○ Webpack
@@ -40,14 +62,27 @@ Some notes about tooling for Javascript environment:
 				□ npm install npm-run-all --save-dev
 		○ Gulp
 		○ Grunt
+	• Debugging
+		○ node-inspector
+
+	• Logging
+		○ pino
+
 	• Style
 		○ EditorConfig (plugin para o VSCode) - http://editorconfig.org/
+
 	• Package Management
 		○ npm
 		○ Node Security Platform (Security scanning) - npm install -g nsp
 			§ nsp check
+		○ *** Semantic versioning
+			§ http://semver.org/
 	• Web server
 		○ express
+		○ Cache
+			§ redis
+			§ memcached
+
 	• Share work-in-progress (expose website)
 		○ localtunnel  (lt --port 3000)
 		○ surge
@@ -55,25 +90,36 @@ Some notes about tooling for Javascript environment:
 	• Testing
 		○ Unit
 			§ mocha (testing framework)
-			
 			§ chai (assertion library)
 				□ var expect = require('chai').expect;
 			§ *** Padrão em nome de arquivos:
 				□ index.test.js
 				□ Package.json:    "test": "mocha --reporter progress \"lib/**/*.test.js\""
+
 			§ jsdom, cheerio (helper - evaluate DOM)
+
+			§ istanbul (nyc)
+				□ npm i -D nyc
+				□ Codecov - https://codecov.io/gh
+					® npm i -D codecov
+
 		○ UI
 			§ Selenium
 	• Continuous integration
 		○ Integration
-			§ Travis CI
+			§ Travis CI - https://travis-ci.org/
 			§ GitLab CI
 			§ Jenkins
 			§ CircleCI
 			§ AppVeyor
-	• HTTP and Mock API
+	• HTTP Calls
 		○ HTTP Call
 			§ request (Node)
-			§ fetch (polyfill - browser)
+			§ node-fetch (polyfill - browser)
 			§ axios (Node and browser)
 		○ *** Centralize API Calls
+	• Mock API
+		○ Nock
+		○ JSON Server + JSON Schema Faker
+			§ faker.js, chance.js
+      Swagger
