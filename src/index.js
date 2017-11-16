@@ -1,9 +1,25 @@
-var express = require("express");
-var app = express();
+import express from "express";
+import Person from "./person"
+
+let app = express();
 var port = process.argv[2] ? process.argv[2] : 8080;
 var book = require("../lib/gradeBook").book;
+
+
 debugger;
-app.get("/", function (req, res) {
+
+let me = new Person("Marina", 1992);
+console.log(me);
+me.name = "Denis";
+me.birthYear = 1989;
+console.log(me);
+
+me.sayName().then(() => {
+   console.log("I said the name");
+   return "{ \"message\": \"I said the name\" }";
+}).then(JSON.parse).then(console.log);
+
+app.get("/", (req, res) => {
 	if (req.query.grades) {
 		var grades = req.query.grades.split(",");
 		for(var i = 0; i < grades.length; i++){
