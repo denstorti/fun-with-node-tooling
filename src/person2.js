@@ -13,8 +13,8 @@ const person = {
    }
 };
 
-person.speak("Hello!");
-person.getOld();
-person.getOld(3);
+// person.speak("Hello!");
+// person.getOld();
+// person.getOld(3);
 
 module.exports = person;
