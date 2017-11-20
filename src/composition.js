@@ -1,3 +1,5 @@
+//https://medium.com/javascript-scene/3-different-kinds-of-prototypal-inheritance-es6-edition-32d777fa16c9
+
 import person from "./person2.js"
 
 const animal = {
