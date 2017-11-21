@@ -2,9 +2,8 @@ import express from "express";
 import Person from "./person"
 
 let app = express();
-var port = process.argv[2] ? process.argv[2] : 8080;
-var book = require("../lib/gradeBook").book;
-
+let port = process.argv[2] ? process.argv[2] : 8080;
+let book = require("../lib/gradeBook").book;
 
 debugger;
 
@@ -46,3 +45,22 @@ app.get("/users", function (req, res) {
 
 app.listen(port);
 console.log("Listening to port " + port);
+
+let add = (function() {
+  let counter = 0;
+  return function() {
+    return counter += 1;
+    console.log('COUNTER: ' + counter);
+  };
+})();
+
+var plus = (function () {
+    var counter = 0;
+    return function () {return counter += 1;}
+})();
+
+add();   //1
+add();   //2
+add();   //3
+
+plus();   //1
